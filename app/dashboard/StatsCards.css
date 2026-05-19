@@ -1,0 +1,83 @@
+/* Grid layout */
+.stats-cards-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .stats-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .stats-cards-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Card inner layout */
+.stats-card-content {
+  padding: 1.5rem;
+}
+
+.stats-card-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.stats-label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #6b7280; /* muted color */
+  text-transform: uppercase;
+}
+
+.stats-value {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #111827; /* dark text */
+  margin-top: 0.25rem;
+}
+
+.stats-value.open {
+  color: #dc2626; /* red for open issues */
+}
+
+.stats-value.progress {
+  color: #f59e0b; /* yellow for progress */
+}
+
+.stats-value.resolved {
+  color: #16a34a; /* green for resolved */
+}
+
+.stats-note {
+  font-size: 0.75rem;
+  color: #6b7280;
+  margin-top: 0.25rem;
+}
+
+/* Icons */
+.stats-icon {
+  width: 2rem;
+  height: 2rem;
+}
+
+.icon-trending {
+  color: #2563eb; /* blue */
+}
+
+.icon-open {
+  color: #dc2626; /* red */
+}
+
+.icon-progress {
+  color: #f59e0b; /* yellow */
+}
+
+.icon-resolved {
+  color: #16a34a; /* green */
+}
